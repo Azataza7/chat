@@ -4,3 +4,8 @@ export interface messageList {
   author: string;
   datetime: string;
 }
+
+export interface userMessage {
+  text: string;
+  author: string;
+}

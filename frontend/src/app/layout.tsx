@@ -3,12 +3,11 @@
 import {Inter} from 'next/font/google';
 import './globals.css';
 import {QueryClient, QueryClientProvider} from '@tanstack/react-query';
-import {CssBaseline} from '@mui/material';
+import {CssBaseline, ThemeProvider} from '@mui/material';
 import {Container} from '@mui/material';
 
 const inter = Inter({subsets: ['latin']});
 const queryClient = new QueryClient();
-
 
 export default function RootLayout({children,}: Readonly<{ children: React.ReactNode; }>) {
 
@@ -18,13 +17,12 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
       <html lang="en">
       <body className={inter.className}>
       <main>
-        <Container maxWidth="xl">
+        <Container maxWidth="xl" sx={{padding: 1}}>
           {children}
         </Container>
       </main>
       </body>
       </html>
     </QueryClientProvider>
-
   );
 }

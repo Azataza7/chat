@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Card, CardContent, CardHeader, Container, Grid,
+  Card, CardContent, Container, Grid,
   Typography
 } from '@mui/material';
 import {messageList} from '../../../types';
@@ -13,7 +13,7 @@ interface Props {
 const MessageItem: React.FC<Props> = ({message}) => {
   return (
     <Grid item xs={12} sm={12} md={6} lg={4} className="message-box">
-      <Card sx={{minWidth: 275}}>
+      <Card sx={{minWidth: 275}} >
         <Container sx={{display: "flex", alignItems: "center", justifyContent: "space-between", paddingY: 0.2}}>
           <Typography>
             {message.author}
